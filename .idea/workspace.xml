@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b488aa3-e585-4628-a7cf-0be093392467" name="Changes" comment="modif. début du tp5, programme peut déssiner un rectangle et un `cercle`.">
+    <list default="true" id="2b488aa3-e585-4628-a7cf-0be093392467" name="Changes" comment="modif. barely anytinh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -92,11 +92,20 @@
       <option name="project" value="LOCAL" />
       <updated>1771434302419</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="modif. barely anytinh">
+      <option name="closed" value="true" />
+      <created>1771600514044</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1771600514044</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="modif. début du tp5, programme peut déssiner un rectangle et un `cercle`." />
-    <option name="LAST_COMMIT_MESSAGE" value="modif. début du tp5, programme peut déssiner un rectangle et un `cercle`." />
+    <MESSAGE value="modif. barely anytinh" />
+    <option name="LAST_COMMIT_MESSAGE" value="modif. barely anytinh" />
   </component>
 </project>
