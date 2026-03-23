@@ -158,8 +158,10 @@ class GameView(arcade.View):
 
         # TEXT
 
-        affichage = arcade.Text("Robin Bird", 20, WINDOW_HEIGHT - 40, arcade.color.BLACK_OLIVE, 20,
-                                font_name="Times New Roman")
+        affichage = arcade.Text("Robin Bird",
+                                20, WINDOW_HEIGHT - 40,
+                                arcade.color.BLACK_OLIVE,
+                                20, font_name="Times New Roman")
         affichage.draw()
         self.coordinate_text.draw()
 
