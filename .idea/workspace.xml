@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b488aa3-e585-4628-a7cf-0be093392467" name="Changes" comment="modif. Debut du dessins">
+    <list default="true" id="2b488aa3-e585-4628-a7cf-0be093392467" name="Changes" comment="modif. oragniser le code. ALSO, ajoutee un template pour mieux visualiser le dessin en connaissant precisement les points avec la souris">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -116,7 +116,23 @@
       <option name="project" value="LOCAL" />
       <updated>1773778794700</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="modif. Moitier du dessin: ajout d'un polygone pour la base du l'oiseau, un triangle pour le bec, quelque rectangles pour remplir les espaces vides et des arcs pour le ventre et tete du oiseau.">
+      <option name="closed" value="true" />
+      <created>1774296632098</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1774296632098</updated>
+    </task>
+    <task id="LOCAL-00006" summary="modif. oragniser le code. ALSO, ajoutee un template pour mieux visualiser le dessin en connaissant precisement les points avec la souris">
+      <option name="closed" value="true" />
+      <created>1774296967464</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1774296967464</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -124,6 +140,9 @@
     <MESSAGE value="modif. barely anytinh" />
     <MESSAGE value="modif. ajouter un petit foret, et appris comment faire des arcs" />
     <MESSAGE value="modif. Debut du dessins" />
-    <option name="LAST_COMMIT_MESSAGE" value="modif. Debut du dessins" />
+    <MESSAGE value="modif. Moitier du dessin: ajout d'un polygone pour la base du l'oiseau, un triangle pour le bec, quelque rectangles pour remplir les espaces vides et des arcs pour le ventre et tete du oiseau." />
+    <MESSAGE value="modif. Moitier du dessin: ajout d'un polygone pour la base du l'oiseau, un triangle pour le bec, quelque rectangles pour remplir les espaces vides et des arcs pour le ventre et tete du oiseau. ALSO, ajoutee un template pour mieux visualiser le dessin en connaissant precisement les points avec la souris." />
+    <MESSAGE value="modif. oragniser le code. ALSO, ajoutee un template pour mieux visualiser le dessin en connaissant precisement les points avec la souris" />
+    <option name="LAST_COMMIT_MESSAGE" value="modif. oragniser le code. ALSO, ajoutee un template pour mieux visualiser le dessin en connaissant precisement les points avec la souris" />
   </component>
 </project>

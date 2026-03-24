@@ -36,7 +36,7 @@ class GameView(arcade.View):
 
         # If you have sprite lists, you should create them here,
         # and set them to None
-        self.coordinate_text = arcade.Text(f"()",0,0)
+        self.coordinate_text = arcade.Text(f"()", 0, 0)
 
     def reset(self):
         """Reset the game to the initial state."""
@@ -60,7 +60,6 @@ class GameView(arcade.View):
                                         tilt_angle=340, num_segments=100)
         """
 
-
         # CIRCLE
         """
         arcade.draw.draw_circle_outline(200,
@@ -74,7 +73,7 @@ class GameView(arcade.View):
                                         arcade.color.BUBBLE_GUM
                                         , num_segments=8)
         """
-        # RECTANGLE FOREST
+        # BACKGROUND
 
         r_equator = arcade.rect.XYWH(WINDOW_WIDTH / 2,
                                      WINDOW_HEIGHT / 2,
@@ -85,12 +84,6 @@ class GameView(arcade.View):
 
         arcade.draw_rect_filled(r_equator, arcade.csscolor.BLACK)
         arcade.draw_rect_filled(r_rotation, arcade.csscolor.BLACK)
-
-
-        # TRIANGLE
-
-
-        arcade.draw.draw_triangle_filled(424,622, 424,584,337, 620, arcade.color.YELLOW)
 
         # LIGNE
         """
@@ -109,7 +102,7 @@ class GameView(arcade.View):
         arcade.draw.draw_lines(line_list, arcade.color.FOREST_GREEN)
         """
 
-        # ARC
+        # Bird Body
 
         arcade.draw.draw_arc_filled(499, 597,
                                     157, 96,
@@ -123,17 +116,19 @@ class GameView(arcade.View):
             0, 180,
             tilt_angle=235)
 
-        # RECTANGLE
         top_fill = arcade.rect.XYWH(
             512, 493,
-            90, 135)
+            100, 135)
         bottom_fill = arcade.rect.XYWH(
             717, 175,
             100, 50)
+        bottom_refill = arcade.rect.XYWH(
+            720, 200,
+            60, 100)
+
         arcade.draw_rect_filled(top_fill, arcade.color.BURNT_ORANGE)
         arcade.draw_rect_filled(bottom_fill, arcade.color.BURNT_ORANGE)
-
-        # POLYGONE
+        arcade.draw_rect_filled(bottom_refill, arcade.color.ANTIQUE_BRONZE)
 
         pointsss = [((WINDOW_WIDTH / 2) - 350, (WINDOW_HEIGHT / 2) + 315),
                     ((WINDOW_WIDTH / 2) + 300, (WINDOW_HEIGHT / 2) + 315),
@@ -148,13 +143,53 @@ class GameView(arcade.View):
             (553, 622),
             (571, 552),
             (613, 473),
-            (748, 303),
+            (748, 313),
+            (791, 281),
+            (833, 227),
             (934, 137),
             (749, 149)]
+
+        bird_tail = [
+            (888, 175),
+            (1080, 109),
+            (1078, 91),
+            (862, 145)]
+
         arcade.draw.draw_polygon_outline(pointsss, arcade.color.BLACK, 5)
-        arcade.draw.draw_polygon_filled(bird_body, arcade.color.ANTIQUE_BRONZE,)
+        arcade.draw.draw_polygon_filled(bird_tail, arcade.color.ANTIQUE_BRONZE, )
+        arcade.draw.draw_polygon_filled(bird_body, arcade.color.ANTIQUE_BRONZE, )
 
+        arcade.draw.draw_arc_filled(
+            780, 145,
+            150, 85,
+            arcade.color.DUTCH_WHITE,
+            0, 180,
+            tilt_angle=3)
+        arcade.draw.draw_triangle_filled(
+            855, 141,
+            937, 138,
+            840, 167,
+            arcade.color.DUTCH_WHITE)
+        # EYE
+        arcade.draw.draw_circle_filled(486,
+                                       610,
+                                       15,
+                                       arcade.color.BLACK)
+        arcade.draw.draw_circle_outline(486,
+                                        610,
+                                        15,
+                                        arcade.color.ARYLIDE_YELLOW)
 
+        # Beak
+
+        arcade.draw.draw_triangle_filled(424, 622,
+                                         424, 584,
+                                         337, 620,
+                                         arcade.color.YELLOW)
+        arcade.draw.draw_triangle_filled(421, 610,
+                                         462, 587,
+                                         421, 585,
+                                         arcade.color.YELLOW)
 
         # TEXT
 
@@ -192,7 +227,7 @@ class GameView(arcade.View):
         """
         Called whenever the mouse moves.
         """
-        self.coordinate_text = arcade.Text(f"({x},{y})",x,y)
+        self.coordinate_text = arcade.Text(f"({x},{y})", x, y)
 
     def on_mouse_press(self, x, y, button, key_modifiers):
         """
@@ -222,11 +257,8 @@ def main():
     arcade.run()
 
 
-
 if __name__ == "__main__":
     main()
-
-
 
 #
 # import arcade
