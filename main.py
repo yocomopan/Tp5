@@ -2,7 +2,10 @@
 2026-02-18
 Ivan Zheryakov
 Arcade TP5 theorie
-
+Lien de l'image:
+https://hips.hearstapps.com/hmg-prod/images
+/american-robin-adult-male-in-grass-royalty-free-image-1755043928.pjpeg?crop=0.669
+xw:1.00xh;0.265xw,0&resize=980:*
 
 Starting Template
 
@@ -14,10 +17,12 @@ python -m arcade.examples.starting_template
 """
 
 import arcade
+import random
 
 WINDOW_WIDTH = 1280
 WINDOW_HEIGHT = 720
 WINDOW_TITLE = "Starting Template"
+
 
 
 class GameView(arcade.View):
@@ -85,22 +90,39 @@ class GameView(arcade.View):
         arcade.draw_rect_filled(r_equator, arcade.csscolor.BLACK)
         arcade.draw_rect_filled(r_rotation, arcade.csscolor.BLACK)
 
-        # LIGNE
-        """
-        arcade.draw.draw_line(WINDOW_WIDTH - 250, WINDOW_HEIGHT - 110,
-                              WINDOW_WIDTH, WINDOW_HEIGHT - 110,
-                              arcade.color.BANANA_YELLOW, 10)
+        # LEGS
+        arcade.draw.draw_line(667, 156,
+                              681, 83,
+                              arcade.color.ANTIQUE_BRONZE, 20) # 1
 
-        points = [(700, 300), (750, 600), (345, 675)]
-        arcade.draw.draw_line_strip(points, arcade.color.BUFF)
+        arcade.draw.draw_line(560, 160,
+                              579, 86,
+                              arcade.color.BATTLESHIP_GREY, 25) # 2
 
-        un_tuple = (23, True , ["a", "b"])
+        arcade.draw.draw_line(550, 187,
+                              564, 148,
+                              arcade.color.ANTIQUE_BRONZE, 30) # 2
 
-        points = [(700, 300), (750, 600), (345, 675)]
+        arcade.draw.draw_line(667+6, 156-30,
+                              681, 83,
+                              arcade.color.BATTLESHIP_GREY, 20) # 1
+        # GRASS
+        def randomness(gg, gh, cc):
+            grass_height = random.randint(10, 147)
+            grass_growth = random.randint(-5, 5)
+            color_list = [arcade.color.OLD_MOSS_GREEN, arcade.color.FOREST_GREEN, arcade.color.ANDROID_GREEN]
 
-        line_list = [(139, 556), (720, 512), (773, 704), (710, 596)]
-        arcade.draw.draw_lines(line_list, arcade.color.FOREST_GREEN)
-        """
+
+        distance = 0
+        toodistance = -6
+        color_list = [arcade.color.OLD_MOSS_GREEN, arcade.color.FOREST_GREEN, arcade.color.ANDROID_GREEN]
+        for i in range(10):
+            arcade.draw.draw_line(distance ,0,distance
+                                  randomness(gg),randomness(gh) ,
+                                  randomness(cc), 10)
+
+
+        # un_tuple = (23, True , ["a", "b"])
 
         # Bird Body
 
@@ -192,7 +214,8 @@ class GameView(arcade.View):
                                          arcade.color.YELLOW)
 
         # TEXT
-
+        arcade.draw_point(10, WINDOW_HEIGHT - 30,
+                          arcade.color.BLACK_OLIVE, size=10)
         affichage = arcade.Text("Robin Bird",
                                 20, WINDOW_HEIGHT - 40,
                                 arcade.color.BLACK_OLIVE,
@@ -259,134 +282,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-#
-# import arcade
-# from arcade import open_window
-#
-# WINDOW_WIDTH = 800
-# WINDOW_HEIGHT = 600
-# WINDOW_TITLE = "Tutoriel Arcade"
-#
-#
-# def main():
-#     arcade.open_window(WINDOW_WIDTH, WINDOW_HEIGHT, "Tutoriel Arcade")
-#
-#
-# arcade.open_window(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE)
-# arcade.set_background_color(arcade.color.LIMERICK)
-# arcade.start_render()  # + Start ↕
-# # ELLIPSE
-#
-# arcade.draw.draw_ellipse_filled(400,
-#                                 300,
-#                                 500,
-#                                 300,
-#                                 arcade.color.ANTIQUE_BRONZE,
-#                                 tilt_angle=50, num_segments=5)
-#
-# # RECTANGLE
-#
-#
-# # CIRCLE
-# """
-# arcade.draw.draw_circle_outline(200,
-#                                 200,
-#                                 60,
-#                                 arcade.color.BUBBLE_GUM,
-#                                 num_segments=8, tilt_angle=35)
-# arcade.draw.draw_circle_filled(400,
-#                                 200,
-#                                 60,
-#                                 arcade.color.BUBBLE_GUM
-#                                 , num_segments=8)
-# """
-# # RECTANGLE FOREST
-#
-# r_equator = arcade.rect.XYWH(WINDOW_WIDTH / 2,
-#                              WINDOW_HEIGHT / 2,
-#                              WINDOW_WIDTH, 2)
-# r_rotation = arcade.rect.XYWH(WINDOW_WIDTH / 2,
-#                               WINDOW_HEIGHT / 2,
-#                               2, WINDOW_HEIGHT)
-#
-# arcade.draw_rect_filled(r_equator,arcade.csscolor.BLACK)
-# arcade.draw_rect_filled(r_rotation, arcade.csscolor.BLACK)
-#
-# # ARC
-# """
-# arcade.draw.draw_arc_filled(200, WINDOW_HEIGHT / 2 + 20,
-#                             60, 100,
-#                             arcade.csscolor.FOREST_GREEN,
-#                             0, 180)
-#
-# arcade.draw.draw_arc_filled(250, 245,
-#                             60, 93,
-#                             arcade.csscolor.FOREST_GREEN,
-#                             0, 180)
-#
-# arcade.draw.draw_arc_filled(300, 270,
-#                             60, 86,
-#                             arcade.csscolor.FOREST_GREEN,
-#                             0, 180)
-#
-# arcade.draw.draw_arc_filled(350, 245,
-#                             58, 80,
-#                             arcade.csscolor.FOREST_GREEN,
-#                             0, 180)
-#
-# arcade.draw.draw_arc_filled(400, 290,
-#                             40, 29,
-#                             arcade.csscolor.DARK_RED,
-#                             0, 180)
-# """
-# # TRIANGLE
-# """
-# y = WINDOW_HEIGHT / 2 + 40
-# arcade.draw.draw_triangle_filled(500, y + 40,
-#                            470, y - 20,
-#                            530, y - 20,
-#                            arcade.color.FOREST_GREEN)
-# """
-# # LIGNE
-# """
-# arcade.draw.draw_line(WINDOW_WIDTH - 250, WINDOW_HEIGHT - 110,
-#                       WINDOW_WIDTH, WINDOW_HEIGHT - 110,
-#                       arcade.color.BANANA_YELLOW, 10)
-#
-# points = [(700, 300), (750, 600), (345, 675)]
-# arcade.draw.draw_line_strip(points, arcade.color.BUFF)
-#
-# un_tuple = (23, True , ["a", "b"])
-#
-# points = [(700, 300), (750, 600), (345, 675)]
-#
-# line_list = [(139, 556), (720, 512), (773, 704), (710, 596)]
-# arcade.draw.draw_lines(line_list, arcade.color.FOREST_GREEN)
-# """
-# # POLYGONE
-# """
-# pointss = [(700, 300), (750, 600), (345, 675)]
-# arcade.draw.draw_polygon_filled(pointss, arcade.color.AERO_BLUE)
-# """
-# pointsss = [((WINDOW_WIDTH / 2) - 250, (WINDOW_HEIGHT / 2) + 215),
-#             ((WINDOW_WIDTH / 2) + 200, (WINDOW_HEIGHT / 2) + 215),
-#             ((WINDOW_WIDTH / 2) + 200, (WINDOW_HEIGHT / 2) - 250),
-#             ((WINDOW_WIDTH / 2) - 250, (WINDOW_HEIGHT / 2) - 250)]
-# bird_body = [((0), (0)),
-#             ((240), (400)),
-#             ((), (500)),
-#             ((100), (500))]
-# arcade.draw.draw_polygon_outline(pointsss, arcade.color.BLACK, 5)
-# arcade.draw.draw_polygon_outline(bird_body, arcade.color.ANTIQUE_RUBY, 5)
-#
-# # TEXT
-#
-# affichage = arcade.Text("Robin Bird", 20, WINDOW_HEIGHT - 40, arcade.color.BLACK_OLIVE, 20, font_name="Times New Roman")
-# affichage.draw()
-#
-#
-#
-#
-# arcade.finish_render()  #  - Finish ↕
-# arcade.run()  #  Makes whatever was in between those two.

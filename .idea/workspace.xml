@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b488aa3-e585-4628-a7cf-0be093392467" name="Changes" comment="modif. oragniser le code. ALSO, ajoutee un template pour mieux visualiser le dessin en connaissant precisement les points avec la souris">
+    <list default="true" id="2b488aa3-e585-4628-a7cf-0be093392467" name="Changes" comment="modif. ajouter des cercles pour l'oeil, ajouter un polygone et un arc pour la queue, ajouter un rectangle pour changer la base, puis modifier le polygone de la base.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -132,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774296967464</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="modif. ajouter des cercles pour l'oeil, ajouter un polygone et un arc pour la queue, ajouter un rectangle pour changer la base, puis modifier le polygone de la base.">
+      <option name="closed" value="true" />
+      <created>1774378402576</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1774378402576</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -143,6 +151,7 @@
     <MESSAGE value="modif. Moitier du dessin: ajout d'un polygone pour la base du l'oiseau, un triangle pour le bec, quelque rectangles pour remplir les espaces vides et des arcs pour le ventre et tete du oiseau." />
     <MESSAGE value="modif. Moitier du dessin: ajout d'un polygone pour la base du l'oiseau, un triangle pour le bec, quelque rectangles pour remplir les espaces vides et des arcs pour le ventre et tete du oiseau. ALSO, ajoutee un template pour mieux visualiser le dessin en connaissant precisement les points avec la souris." />
     <MESSAGE value="modif. oragniser le code. ALSO, ajoutee un template pour mieux visualiser le dessin en connaissant precisement les points avec la souris" />
-    <option name="LAST_COMMIT_MESSAGE" value="modif. oragniser le code. ALSO, ajoutee un template pour mieux visualiser le dessin en connaissant precisement les points avec la souris" />
+    <MESSAGE value="modif. ajouter des cercles pour l'oeil, ajouter un polygone et un arc pour la queue, ajouter un rectangle pour changer la base, puis modifier le polygone de la base." />
+    <option name="LAST_COMMIT_MESSAGE" value="modif. ajouter des cercles pour l'oeil, ajouter un polygone et un arc pour la queue, ajouter un rectangle pour changer la base, puis modifier le polygone de la base." />
   </component>
 </project>
