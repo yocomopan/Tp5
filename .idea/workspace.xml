@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b488aa3-e585-4628-a7cf-0be093392467" name="Changes" comment="modif. ajouter des cercles pour l'oeil, ajouter un polygone et un arc pour la queue, ajouter un rectangle pour changer la base, puis modifier le polygone de la base.">
+    <list default="true" id="2b488aa3-e585-4628-a7cf-0be093392467" name="Changes" comment="modif. ajouter pieds, mais problemes avec le gazon.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -140,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774378402576</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="modif. ajouter pieds, mais problemes avec le gazon.">
+      <option name="closed" value="true" />
+      <created>1774968295341</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1774968295341</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -152,6 +160,7 @@
     <MESSAGE value="modif. Moitier du dessin: ajout d'un polygone pour la base du l'oiseau, un triangle pour le bec, quelque rectangles pour remplir les espaces vides et des arcs pour le ventre et tete du oiseau. ALSO, ajoutee un template pour mieux visualiser le dessin en connaissant precisement les points avec la souris." />
     <MESSAGE value="modif. oragniser le code. ALSO, ajoutee un template pour mieux visualiser le dessin en connaissant precisement les points avec la souris" />
     <MESSAGE value="modif. ajouter des cercles pour l'oeil, ajouter un polygone et un arc pour la queue, ajouter un rectangle pour changer la base, puis modifier le polygone de la base." />
-    <option name="LAST_COMMIT_MESSAGE" value="modif. ajouter des cercles pour l'oeil, ajouter un polygone et un arc pour la queue, ajouter un rectangle pour changer la base, puis modifier le polygone de la base." />
+    <MESSAGE value="modif. ajouter pieds, mais problemes avec le gazon." />
+    <option name="LAST_COMMIT_MESSAGE" value="modif. ajouter pieds, mais problemes avec le gazon." />
   </component>
 </project>

@@ -2,6 +2,7 @@
 2026-02-18
 Ivan Zheryakov
 Arcade TP5 theorie
+
 Lien de l'image:
 https://hips.hearstapps.com/hmg-prod/images
 /american-robin-adult-male-in-grass-royalty-free-image-1755043928.pjpeg?crop=0.669
@@ -17,12 +18,10 @@ python -m arcade.examples.starting_template
 """
 
 import arcade
-import random
 
 WINDOW_WIDTH = 1280
 WINDOW_HEIGHT = 720
 WINDOW_TITLE = "Starting Template"
-
 
 
 class GameView(arcade.View):
@@ -45,7 +44,7 @@ class GameView(arcade.View):
 
     def reset(self):
         """Reset the game to the initial state."""
-        # Do changes needed to restart the game here if you want to support that
+        # Do changes need to restart the game here if you want to support that
         pass
 
     def on_draw(self):
@@ -56,81 +55,31 @@ class GameView(arcade.View):
         # This command should happen before we start drawing. It will clear
         # the screen to the background color, and erase what we drew last frame.
         self.clear()
-        """
-        arcade.draw.draw_ellipse_filled(550,
-                                        350,
-                                        300,
-                                        400,
-                                        arcade.color.BURNT_ORANGE,
-                                        tilt_angle=340, num_segments=100)
-        """
-
-        # CIRCLE
-        """
-        arcade.draw.draw_circle_outline(200,
-                                        200,
-                                        60,
-                                        arcade.color.BUBBLE_GUM,
-                                        num_segments=8, tilt_angle=35)
-        arcade.draw.draw_circle_filled(400,
-                                        200,
-                                        60,
-                                        arcade.color.BUBBLE_GUM
-                                        , num_segments=8)
-        """
-        # BACKGROUND
-
-        r_equator = arcade.rect.XYWH(WINDOW_WIDTH / 2,
-                                     WINDOW_HEIGHT / 2,
-                                     WINDOW_WIDTH, 2)
-        r_rotation = arcade.rect.XYWH(WINDOW_WIDTH / 2,
-                                      WINDOW_HEIGHT / 2,
-                                      2, WINDOW_HEIGHT)
-
-        arcade.draw_rect_filled(r_equator, arcade.csscolor.BLACK)
-        arcade.draw_rect_filled(r_rotation, arcade.csscolor.BLACK)
 
         # LEGS
         arcade.draw.draw_line(667, 156,
                               681, 83,
-                              arcade.color.ANTIQUE_BRONZE, 20) # 1
+                              arcade.color.ANTIQUE_BRONZE, 20)  # 1
 
         arcade.draw.draw_line(560, 160,
                               579, 86,
-                              arcade.color.BATTLESHIP_GREY, 25) # 2
+                              arcade.color.BATTLESHIP_GREY, 25)  # 2
 
         arcade.draw.draw_line(550, 187,
                               564, 148,
-                              arcade.color.ANTIQUE_BRONZE, 30) # 2
+                              arcade.color.ANTIQUE_BRONZE, 30)  # 2
 
-        arcade.draw.draw_line(667+6, 156-30,
+        arcade.draw.draw_line(667 + 6, 156 - 30,
                               681, 83,
-                              arcade.color.BATTLESHIP_GREY, 20) # 1
-        # GRASS
-        def randomness(gg, gh, cc):
-            grass_height = random.randint(10, 147)
-            grass_growth = random.randint(-5, 5)
-            color_list = [arcade.color.OLD_MOSS_GREEN, arcade.color.FOREST_GREEN, arcade.color.ANDROID_GREEN]
+                              arcade.color.BATTLESHIP_GREY, 20)  # 1
 
-
-        distance = 0
-        toodistance = -6
-        color_list = [arcade.color.OLD_MOSS_GREEN, arcade.color.FOREST_GREEN, arcade.color.ANDROID_GREEN]
-        for i in range(10):
-            arcade.draw.draw_line(distance ,0,distance
-                                  randomness(gg),randomness(gh) ,
-                                  randomness(cc), 10)
-
-
-        # un_tuple = (23, True , ["a", "b"])
-
-        # Bird Body
-
-        arcade.draw.draw_arc_filled(499, 597,
-                                    157, 96,
-                                    arcade.color.ANTIQUE_BRONZE,
-                                    0, 180,
-                                    tilt_angle=19)
+        # BIRD BODY AND TAIL
+        arcade.draw.draw_arc_filled(
+            499, 597,
+            157, 96,
+            arcade.color.ANTIQUE_BRONZE,
+            0, 180,
+            tilt_angle=19)
         arcade.draw.draw_arc_filled(
             599, 360,
             460, 350,
@@ -152,10 +101,6 @@ class GameView(arcade.View):
         arcade.draw_rect_filled(bottom_fill, arcade.color.BURNT_ORANGE)
         arcade.draw_rect_filled(bottom_refill, arcade.color.ANTIQUE_BRONZE)
 
-        pointsss = [((WINDOW_WIDTH / 2) - 350, (WINDOW_HEIGHT / 2) + 315),
-                    ((WINDOW_WIDTH / 2) + 300, (WINDOW_HEIGHT / 2) + 315),
-                    ((WINDOW_WIDTH / 2) + 300, (WINDOW_HEIGHT / 2) - 350),
-                    ((WINDOW_WIDTH / 2) - 350, (WINDOW_HEIGHT / 2) - 350)]
         bird_body = [
             (602, 321),
             (502, 536),
@@ -177,7 +122,6 @@ class GameView(arcade.View):
             (1078, 91),
             (862, 145)]
 
-        arcade.draw.draw_polygon_outline(pointsss, arcade.color.BLACK, 5)
         arcade.draw.draw_polygon_filled(bird_tail, arcade.color.ANTIQUE_BRONZE, )
         arcade.draw.draw_polygon_filled(bird_body, arcade.color.ANTIQUE_BRONZE, )
 
@@ -192,6 +136,64 @@ class GameView(arcade.View):
             937, 138,
             840, 167,
             arcade.color.DUTCH_WHITE)
+
+        # FEATHER PATTERN
+        arcade.draw.draw_ellipse_filled(
+            443, 461,
+            20, 20,
+            arcade.color.ORANGE_PEEL,
+            tilt_angle=340, num_segments=5)
+        arcade.draw.draw_ellipse_filled(
+            471, 491,
+            20, 20,
+            arcade.color.ORANGE_PEEL,
+            tilt_angle=50, num_segments=5)
+        arcade.draw.draw_ellipse_outline(
+            434, 417,
+            50, 50,
+            arcade.color.ORANGE_PEEL,
+            border_width=3, num_segments=5, tilt_angle=10)
+        arcade.draw.draw_ellipse_filled(
+            427, 483,
+            20, 20,
+            arcade.color.ORANGE_PEEL,
+            tilt_angle=140, num_segments=5)
+        arcade.draw.draw_ellipse_filled(
+            441, 415,
+            30, 30,
+            arcade.color.ORANGE_PEEL,
+            tilt_angle=60, num_segments=5)
+        arcade.draw.draw_ellipse_filled(
+            472, 450,
+            25, 25,
+            arcade.color.ORANGE_PEEL,
+            tilt_angle=90, num_segments=6)
+        arcade.draw.draw_ellipse_outline(
+            498, 476,
+            20, 20,
+            arcade.color.ORANGE_PEEL,
+            tilt_angle=120, border_width=2, num_segments=6)
+        arcade.draw.draw_ellipse_filled(
+            497, 425,
+            40, 40,
+            arcade.color.ORANGE_PEEL,
+            tilt_angle=140, num_segments=5)
+        arcade.draw.draw_ellipse_outline(
+            456, 360,
+            80, 80,
+            arcade.color.ORANGE_PEEL,
+            tilt_angle=25, border_width=2, num_segments=5)
+        arcade.draw.draw_ellipse_outline(
+            462, 358,
+            45, 45,
+            arcade.color.ORANGE_PEEL,
+            tilt_angle=25, border_width=4, num_segments=5)
+        arcade.draw.draw_ellipse_filled(
+            442, 380,
+            20, 20,
+            arcade.color.ORANGE_PEEL,
+            tilt_angle=342, num_segments=6)
+
         # EYE
         arcade.draw.draw_circle_filled(486,
                                        610,
@@ -202,8 +204,7 @@ class GameView(arcade.View):
                                         15,
                                         arcade.color.ARYLIDE_YELLOW)
 
-        # Beak
-
+        # BEAK
         arcade.draw.draw_triangle_filled(424, 622,
                                          424, 584,
                                          337, 620,
